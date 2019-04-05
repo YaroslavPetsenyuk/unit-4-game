@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" type="text/css" href="assets\css\reset.css">
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script src="./assets\javascript\game.js"></script>
+
+
+    <div class="container">
+        <div id="header-title">Crystal Collector</div>
+        <div class="instructions">
+            <p class="text">You will be given a random number at the start of the game.</p>
+            <br>
+            <p class="text">There are four crystal below. By clicking on a crystal you will add a specific amount of
+                pints to your total score.</p>
+            <br>
+            <p class="text">You win the game by matching your total score to random number. You loose the game if your
+                total score goes over the random number</p>
+            <br>
+            <p class="text">The value of each crystal is hidden from you untill you click on it.</p>
+            <br>
+            <p class="text">Each time the game starts, the game will change the values of each crystal.</p>
+            <br>
+        </div>
+        <div id="random-box">
+            <div id="display-random"></div>
+        </div>
+
+        <div id="win-lose-box">
+            <p id="wins-text">Wins: </p>
+            <br>
+            <p id="losses-text">Losses: </p>
+        </div>
+        <div class="buttons-box">
+            <div id="first-but" class="buttons">
+                <img class="pictures" id="blue" src="./assets/images/blue.jpg">
+            </div>
+            <div id="second-but" class="buttons">
+                <img class="pictures" id="red" src="./assets/images/red.jpg">
+            </div>
+            <div id="third-but" class="buttons">
+                <img class="pictures" id="yellow" src="./assets/images/yellow.jpg">
+            </div>
+            <div id="fourth-but" class="buttons">
+                <img class="pictures" id="green" src="./assets/images/green.jpg">
+            </div>
+        </div>
+        <div id="score-title">Your total score is: </div>
+        <div id="score-box">0</div>
+    </div>
+
+</body>
+
+</html>
