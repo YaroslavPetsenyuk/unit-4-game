@@ -1,3 +1,4 @@
+// I think my code is all here but for some reason I am having issues with upadating the Scores and the wins and losses count
 $(document).ready(function () {
     var randomNumber = Math.floor(Math.random() * 120 + 19)
     var ranBlue = Math.floor(Math.random() * 12 + 1)
@@ -11,21 +12,9 @@ $(document).ready(function () {
 
     $("#display-random").text(randomNumber);
 
-    $("#wins-span").append(wins);
-    $("#losses-span").append(losses);
+    $("#wins-text").append(wins);
+    $("#losses-text").append(losses);
 
-    function youWin() {
-        $("#win-lose-text").text("You Win !!!");
-        wins++;
-        $("wins-text").append("<span>" + wins + "<span>")
-        resetGame();
-    }
-    function youLose() {
-        $("#win-lose-text").text("<p> You Loose !!! </p>");
-        losses++;
-        $("losses-text").append("<span>" + losses + "<span>")
-        resetGame();
-    }
     function winOrLose() {
         $("#score-box").text(yourScore);
         if (yourScore == randomNumber) {
@@ -35,6 +24,21 @@ $(document).ready(function () {
             youLose();
         }
     }
+    function youWin() {
+        $("#win-loose-text").text("<p>You Win !!!</p>");
+        wins++;
+        $("wins-text").text(wins);
+        resetGame();
+    }
+    function youLose() {
+        $("#win-loose-text").text("<p>You Loose !!!</p>");
+        losses++;
+        var loosePlaceholder = document.createElement("div");
+        $("losses-text").append(loosePlaceholder);
+        $(loosePlaceholder).attr("id", wins).text(wins);
+        resetGame();
+    }
+
     function resetGame() {
         randomNumber = Math.floor(Math.random() * 101 + 19);
         $("#display-random").text(randomNumber);
